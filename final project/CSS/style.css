@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #666;
+}
+@font-face {
+    font-family: 'bold';
+    src: url(../fonts/ubisoftsans-bold.woff2);
+}
+@font-face {
+    font-family: 'light';
+    src: url(../fonts/ubisoftsans-regular.woff2);
+}
+.navbar{
+    position: fixed;
+    font-family: bold;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.nav-content{
+    width: 90%;
+    height: 100%;
+
+    display: flex;
+    position: relative;
+}
+.nav-left{
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.main-logo{
+    display: inline-block;
+    width: 110px;
+    height: 100%;
+    margin: 0 50px;
+    background-image: url(../image/main-logo.jpg);
+    background-size: 100%;
+    background-position: center;
+    cursor: pointer;
+}
+.navbar ul{
+    list-style-type: none;
+    display: inline-block;
+    height: 100%;
+    width: 60%;
+}
+.nav-left li{
+    line-height: 50px;
+    padding: 0 25px;
+    display: inline-block;
+    height: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-left li:hover{
+    background-color: white;
+    color: black;
+}
+.nav-item1{
+    position: relative;
+}
+.nav-item1:hover + .sub-menu1{
+    display: block;
+}
+.nav-item1:hover + .sub-menu-container{
+    visibility: visible;
+}
+.nav-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    direction: rtl;
+}
+.nav-right h3{
+    margin: 0 50px;
+}
+.sub-menu-container{
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+.sub-menu1{
+    display: none;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    /* visibility: hidden; */
+}
+.by-category{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+.by-platform{
+    grid-column: 1 / span 1;
+}
+.by-game{
+    grid-row: 1;
+    grid-column: 2 / span 1;
+}
+.sub-menu1 .table-header{
+    font-family: bold;
+    font-size: 13px;
+    opacity: 0.85;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.377);
+}
+.sub-menu1  td{
+    font-family: light;
+    font-size: 16px;
+    padding: 10px;
+}
+.sub-menu1 td:hover{
+    font-weight: bold;
+}
