@@ -28,7 +28,6 @@ body{
 .nav-content{
     width: 90%;
     height: 100%;
-
     display: flex;
     position: relative;
 }
@@ -39,41 +38,37 @@ body{
     display: flex;
     align-items: center;
 }
-.main-logo{
-    display: inline-block;
-    width: 110px;
+.nav-left span{
     height: 100%;
-    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    cursor: pointer;
+}
+.nav-left span:hover{
+    background-color: white;
+}
+.nav-left span:hover  a{
+    color: black;
+}
+.nav-left a{
+    color: white;
+    text-decoration: none;
+}
+.main-logo{
+    width: 160px;
+    height: 100%;
     background-image: url(../image/main-logo.jpg);
-    background-size: 100%;
+    background-size: 70%;
+    background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
 }
-.navbar ul{
-    list-style-type: none;
-    display: inline-block;
-    height: 100%;
-    width: 60%;
+.nav-item1:hover  .sub-menu1{
+    visibility: visible;
 }
-.nav-left li{
-    line-height: 50px;
-    padding: 0 25px;
-    display: inline-block;
-    height: 100%;
-    font-weight: bold;
-    cursor: pointer;
-}
-.nav-left li:hover{
-    background-color: white;
-    color: black;
-}
-.nav-item1{
-    position: relative;
-}
-.nav-item1:hover + .sub-menu1{
-    display: block;
-}
-.nav-item1:hover + .sub-menu-container{
+.nav-item2:hover .sub-menu2{
     visibility: visible;
 }
 .nav-right{
@@ -86,49 +81,119 @@ body{
 .nav-right h3{
     margin: 0 50px;
 }
-.sub-menu-container{
+.sub-menu1 , .sub-menu2{
     width: 100%;
-    height: 650px;
-    position: absolute;
-    left: 0;
-    visibility: hidden;
-}
-.sub-menu1{
-    display: none;
-    width: 100%;
-    height: 100%;
     display: grid;
-    gap: 30px;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
     color: black;
     background-color: white;
-    padding: 20px;
-    /* visibility: hidden; */
+    padding: 30px;
+    height: 620px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    visibility: hidden;
+    cursor: default;
 }
-.by-category{
+.sub-menu1 .by-category{
     grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
+    grid-row: 1 / span 2;
 }
-.by-platform{
+.sub-menu1 .by-platform{
     grid-column: 1 / span 1;
+    grid-row: 3 / span 2;
 }
-.by-game{
-    grid-row: 1;
+.sub-menu1 .by-game{
+    grid-row: 1 / span 4;
     grid-column: 2 / span 1;
 }
-.sub-menu1 .table-header{
+.sub-menu1 table , .sub-menu2 table{
+    width: 90%;
+}
+.sub-menu1 .table-header , .sub-menu2 .table-header{
     font-family: bold;
     font-size: 13px;
     opacity: 0.85;
     padding: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.377);
+    border-bottom: 1px solid rgba(9, 7, 7, 0.377);
 }
-.sub-menu1  td{
+.sub-menu1  td , .sub-menu2 td{
+    cursor: pointer;
     font-family: light;
     font-size: 16px;
     padding: 10px;
 }
-.sub-menu1 td:hover{
+.sub-menu1 td:hover , .sub-menu2 td:hover{
     font-weight: bold;
+}
+.discover{
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 5;
+}
+.discover p{
+    font-family: bold;
+    font-size: 13px;
+    opacity: 0.85;
+    padding: 13px;
+}
+.discover-pic{
+    width: 100%;
+    height: 80%;
+    background-image: url(../image/ubi-global_nav-discover_ubi_plus.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.sub-menu1 .btn1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 6 ;
+    grid-column: 1 / span 2;
+}
+.sub-menu1 .btn1 button{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: 3px solid #ff0d78;
+    font-family: bold;
+    font-size: 17px;
+    color: white;
+    background-color: #ff0d78;
+    cursor: pointer;
+}
+.sub-menu1 .btn1 button:hover{
+    background-color: white;
+    color: #ff0d78;
+}
+.sub-menu1 .btn2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 6 ;
+    grid-column: 3 / span 2;
+}
+.sub-menu1 .btn2 button{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: 3px solid #006ef5;
+    font-family: bold;
+    font-size: 17px;
+    color: white;
+    background-color: #006ef5;
+    cursor: pointer;
+}
+.sub-menu1 .btn2 button:hover{
+    background-color: white;
+    color: #006ef5;
+}
+.sub-menu2 .by-category{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+}
+.sub-menu2 .by-game{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
 }
