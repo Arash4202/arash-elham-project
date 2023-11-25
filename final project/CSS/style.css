@@ -71,6 +71,12 @@ body{
 .nav-item2:hover .sub-menu2{
     visibility: visible;
 }
+.nav-item3:hover .sub-menu3{
+    visibility: visible;
+}
+.nav-item4:hover .sub-menu4{
+    visibility: visible;
+}
 .nav-right{
     width: 50%;
     height: 100%;
@@ -81,7 +87,7 @@ body{
 .nav-right h3{
     margin: 0 50px;
 }
-.sub-menu1 , .sub-menu2{
+.sub-menu1 , .sub-menu2 , .sub-menu3 , .sub-menu4{
     width: 100%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -93,8 +99,17 @@ body{
     position: absolute;
     left: 0;
     top: 100%;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 9px 8px;
     visibility: hidden;
     cursor: default;
+}
+.sub-menu3{
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    padding: 0;
+    height: 550px;
 }
 .sub-menu1 .by-category{
     grid-column: 1 / span 1;
@@ -111,7 +126,7 @@ body{
 .sub-menu1 table , .sub-menu2 table{
     width: 90%;
 }
-.sub-menu1 .table-header , .sub-menu2 .table-header{
+.sub-menu1 .table-header , .sub-menu2 .table-header , .sub-menu3 .table-header{
     font-family: bold;
     font-size: 13px;
     opacity: 0.85;
@@ -196,4 +211,222 @@ body{
 .sub-menu2 .by-game{
     grid-column: 2 / span 1;
     grid-row: 1 / span 2;
+}
+.popular{
+    grid-column: 3 / span 2;
+}
+.popular table{
+    width: 100%;
+}
+.popular .menu{
+    margin-top: 20px;
+}
+.popular .pictures td{
+    background-color: #ddd;
+    height: 230px;
+}
+.popular .game-name:hover{
+    text-decoration: underline;
+}
+.popular div{
+    margin: auto;
+    width: 80%;
+    height: 85%;
+    background-size: 100%;
+    background-position: center;
+}
+.popular .nav-pic1{
+    background-image: url(../image/56c494ad88a7e300458b4d5a.jpg);
+}
+.popular .nav-pic2{
+    background-image: url(../image/62ea4f8e09372571f2736a71.jpg);
+}
+.popular .nav-pic3{
+    background-image: url(../image/5fb696e80d253c2914972100.jpg);
+}
+.popular .pic-desc{
+    opacity: 0.8;
+}
+.popular .price{
+    color: #ff0d78;
+    font-size: 20px;
+}
+.popular td{
+    width: 200px;
+}
+.sub-menu3 .news1{
+    grid-column: 1 / span 2;
+}
+.sub-menu3 .news2{
+    grid-column: 3 / span 2;
+}
+.news-header{
+    width: 90%;
+    font-family: bold;
+    font-size: 13px;
+    opacity: 0.85;
+    padding: 10px;
+    border-bottom: 1px solid rgba(9, 7, 7, 0.377);
+}
+.news1 , .news2{
+    margin: 20px;
+}
+.news2 .news-header{
+    padding: 17px;
+}
+.news-item{
+    height: 125px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.news-item:hover .news-desc h3{
+    text-decoration: underline;
+}
+.news-desc{
+    width: 85%;
+}
+.news-pic1{
+    width: 260px;
+    height: 100px;
+    background-size: 100%;
+    margin-right: 20px;
+}
+.news1 .news-pic1{
+    background-image: url(../image/UN_AFOP_AccessibilitySpotlight_Thumb960x540.jpg);
+}
+.news2 .news-pic1{
+    background-image: url(../image/UN_Trackmania20YearAnniversary_Thumbnail.jpg);
+}
+.news-pic2{
+    width: 260px;
+    height: 100px;
+    background-size: 100%;
+    margin-right: 20px;
+}
+.news1 .news-pic2{
+    background-image: url(../image/ACNexusVR.jpg);
+}
+.news2 .news-pic2{
+    background-image: url(../image/AC_Nexus_DominicaAtDesk.jpg);
+}
+.news-pic3{
+    width: 260px;
+    height: 100px;
+    background-size: 100%;
+    margin-right: 20px;
+}
+.news1 .news-pic3{
+    background-image: url(../image/Tubarao2.jpg);
+}
+.news2 .news-pic3{
+    background-image: url(../image/TDR_-_Key_Art_-_Agents_in_the_streets_of_NYC.jpg);
+}
+.date{
+    font-size: 12px;
+    opacity: 0.7;
+    font-family: light;
+}
+.sub-menu3 .news-btn{
+    grid-row: 5;
+    grid-column: 1 / span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-menu3 .news-btn button{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: 3px solid #ff0d78;
+    font-family: bold;
+    font-size: 17px;
+    color: white;
+    background-color: #ff0d78;
+    cursor: pointer;
+}
+.sub-menu3 .news-btn button:hover{
+    background-color: white;
+    color: #ff0d78;
+}
+.sub-menu3 .news-side{
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 5;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.sub-menu3 .news-side table{
+    width: 90%;
+    margin-top: 20px;
+}
+.sub-menu3 .news-side .side-item{
+    height: 40px;
+    color: #ff0d78;
+}
+.sub-menu3 .news-side .side-item:hover{
+    color: black;
+}
+.sub-menu4{
+    height: 550px;
+}
+.sub-menu4 .help-header{
+    font-size: 13px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+.sub-menu4 .help{
+    grid-column: 1;
+}
+.help .help-pic{
+    width: 100%;
+    height: 300px;
+    background-image: url(../image/ubi-meganav-rabbids-support-540-v2.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+.discord .discord-pic{
+    width: 100%;
+    height: 300px;
+    background-image: url(../image/ubi-meganav-rabbids-forums-540-v2.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+.sub-menu4 .connect{
+    grid-column: 3 / span 2;
+}
+.connect .connect-pic{
+    width: 100%;
+    height: 300px;
+    background-image: url(../image/ubisoft-meganav-ubisoft_connect_pc-promo.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+.sub-menu4 .help-desc{
+    font-family: light;
+    margin-top: 20px;
+    width: 90%;
+}
+.sub-menu4 .help-btn{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.sub-menu4 button{
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 20px;
+    border: 3px solid #ff0d78;
+    font-family: bold;
+    font-size: 17px;
+    color: white;
+    background-color: #ff0d78;
+    cursor: pointer;
+}
+.sub-menu4 button:hover{
+    background-color: white;
+    color: #ff0d78;
 }
