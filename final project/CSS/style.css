@@ -509,6 +509,7 @@ body{
 .header .slideshow-left h3 {
     margin:0 40px;
     width: 100%;
+    cursor: pointer;
 }
 .header .title-pic{
     position: absolute;
@@ -562,4 +563,93 @@ body{
     font-size: 40px;
     border-radius: 50px;
     text-align: center;
+}
+.body{
+    min-height: 100vh;
+    position: relative;
+    top: 50px;
+}
+.body .section1{
+    border: 1px solid;
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 10vh 50vh 10vh;
+    gap: 30px;
+    grid-template-columns: auto;
+    font-family: bold;
+}
+.body .section1 .title{
+    text-align: center;
+    line-height: 10vh;
+    font-size: 23px;
+    grid-row: 1;
+    grid-column: 1 / span 6;
+}
+.games-sec1{
+    grid-column: 1 / span 6;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-around;
+}
+.game-pic{
+    margin: auto;
+    width: 100%;
+    height: 70%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.body .section1 .games-sec1 h3{
+    width: 90%;
+    margin: 10px auto;
+    font-size: 17px;
+}
+.body .section1 .games-sec1 div:hover{
+    text-decoration: underline;
+}
+.body .section1 .games-sec1 div{
+    cursor: pointer;
+}
+.body .section1 .game-item1{
+    height: 100%;
+    width: 213px;
+}
+.body .section1 .game-item1 .game-pic{
+    background-image: url(../image/acm-boxshot.jpg);
+}
+.body .section1 .game-item2{
+    height: 100%;
+    width: 213px;
+}
+.body .section1 .game-item2 .game-pic{
+    background-image: url(../image/MEMO_Packshot.jpg);
+}
+.body .section1 .game-item3{
+    height: 100%;
+    width: 213px;
+}
+.body .section1 .game-item3 .game-pic{
+    background-image: url(../image/XDefiant_game_info-boxart_464x608.jpg);
+}
+.body .section1 .game-item4{
+    height: 100%;
+    width: 213px;
+}
+.body .section1 .game-item4 .game-pic{
+    background-image: url(../image/avatar-frontiers-of-pandora-boxshot.jpg);
+}
+.body .section1 .game-item5{
+    height: 100%;
+    width: 213px;
+}
+.body .section1 .game-item5 .game-pic{
+    background-image: url(../image/TCM_Packshot.jpg);
+}
+.body .section1 .game-item6{
+    height: 100%;
+    width: 213px;
+}
+.body .section1 .game-item6 .game-pic{
+    background-image: url(../image/swo-boxshot.jpg);
 }
