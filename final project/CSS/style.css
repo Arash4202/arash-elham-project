@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'bold';
+    src: url(../fonts/ubisoftsans-bold.woff2);
+}
+@font-face {
+    font-family: 'light';
+    src: url(../fonts/ubisoftsans-regular.woff2);
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,14 +14,6 @@
 body{
     min-height: 100vh;
     overflow-x: hidden;
-}
-@font-face {
-    font-family: 'bold';
-    src: url(../fonts/ubisoftsans-bold.woff2);
-}
-@font-face {
-    font-family: 'light';
-    src: url(../fonts/ubisoftsans-regular.woff2);
 }
 .navbar{
     z-index: 9999;
@@ -569,7 +569,7 @@ body{
     top: 50px;
 }
 .body .section1{
-    background-color: #eeefefef;
+    background-color: #efefef;
     height: 80vh;
     width: 100%;
     display: grid;
@@ -879,4 +879,91 @@ body{
     height: 100%;
     color: #ff0d78;
     visibility: visible;
+}
+.body .section3{
+    height: 100vh;
+    background-color: #efefef;
+    font-family: bold;
+}
+.body .section3 .title{
+    padding: 20px;
+    text-align: center;
+}
+.body .section3 .store-items{
+    padding: 20px;
+    height: 550px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.body .section3 .store-items .item1 , .body .section3 .store-items .item2 , .body .section3 .store-items .item3{
+    width: 450px;
+    background-position: center;
+    background-size: 100%;
+    cursor: pointer;
+}
+.body .section3 .store-items .item-desc{
+    height: 100px;
+    background-image: linear-gradient(black , transparent);
+    color: white;
+}
+.body .section3 .store-items .item-desc h1{
+    font-size: 26px;
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+.body .section3 .store-items .item1{
+    background-image: url(../image/ubi-homescreen-store_promo-mirage\ \(1\).jpg);
+}
+.body .section3 .store-items .item2{
+    background-image: url(../image/ubi-homescreen-store_promo-avatar-preorder\ \(1\).jpg);
+}
+.body .section3 .store-items .item3{
+    background-image: url(../image/ubi-homescreen-store_promo-tcm-preorder.jpg);
+}
+.body .section4{
+    height: 85vh;
+    font-family: bold;
+    padding: 20px;
+}
+.body .section4 .title{
+    text-align: center;
+    padding: 10px;
+}
+.body .section4 .sec4-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 450px;
+    padding: 20px;
+}
+.body .section4 .sec4-items .item1 ,.body .section4 .sec4-items .item2 , .body .section4 .sec4-items .item3{
+    width: 450px;
+    position: relative;
+    border-radius: 10px;
+    background-size: 100%;
+    background-position: center;
+    cursor: pointer;
+}
+.body .section4 .sec4-items .opacity-box{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.379);
+    padding: 10px;
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 120px;
+}
+.body .section4 .sec4-items .item1{
+    background-image: url(../image/ubi-homescreen-inside-ubisoft-ubi-fwd23-recap\ \(1\).jpg);
+}
+.body .section4 .sec4-items .item2{
+    background-image: url(../image/ubi-inside_ubisoft-story_of_the_crew\ \(1\).jpg);
+}
+.body .section4 .sec4-items .item3{
+    background-image: url(../image/ubi-homescreen-inside-ubisoft-UbiPride2023_480x480\ \(1\).jpg);
 }
