@@ -28,11 +28,12 @@ body{
     background-color: black;
     color: white;
     display: flex;
-    justify-content: center;
-  
+    justify-content: center; 
+}
+.navbar ul{
+    list-style-type: none;
 }
 .nav-content{
-
     width: 90%;
     height: 100%;
     display: flex;
@@ -130,8 +131,9 @@ body{
     grid-row: 1 / span 4;
     grid-column: 2 / span 1;
 }
-.sub-menu1 table , .sub-menu2 table{
+.sub-menu1 ul , .sub-menu2 ul{
     width: 90%;
+    list-style-type: none;
 }
 .sub-menu1 .table-header , .sub-menu2 .table-header , .sub-menu3 .table-header{
     font-family: bold;
@@ -140,13 +142,22 @@ body{
     padding: 10px;
     border-bottom: 1px solid rgba(9, 7, 7, 0.377);
 }
-.sub-menu1  td , .sub-menu2 td{
+.sub-menu1  li , .sub-menu2 li{
     cursor: pointer;
     font-family: light;
     font-size: 16px;
     padding: 10px;
 }
-.sub-menu1 td:hover , .sub-menu2 td:hover{
+.sub-menu1 li:hover , .sub-menu2 li:hover{
+    font-weight: bold;
+}
+.sub-menu2 td{
+    cursor: pointer;
+    font-family: light;
+    font-size: 16px;
+    padding: 10px;
+}
+.sub-menu2 td:hover{
     font-weight: bold;
 }
 .discover{
@@ -365,13 +376,14 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.sub-menu3 .news-side table{
+.sub-menu3 .news-side ul{
     width: 90%;
     margin-top: 20px;
 }
 .sub-menu3 .news-side .side-item{
     height: 40px;
     color: #ff0d78;
+    margin-top: 10px;
 }
 .sub-menu3 .news-side .side-item:hover{
     color: black;
@@ -548,7 +560,7 @@ body{
 .header .slideshow-right .arrow-right{
     margin: 0;
     color: white;
-    background-color: rgba(221, 221, 221, 0.323);
+    background-color: rgba(221, 221, 221, 0.134);
     width: 100px;
     height: 80px;
     line-height: 80px;
@@ -560,7 +572,7 @@ body{
 .header .slideshow-left .arrow-left{
     margin: 0;
     color: white;
-    background-color: rgba(221, 221, 221, 0.323);
+    background-color: rgba(221, 221, 221, 0.134);
     width: 100px;
     height: 80px;
     line-height: 80px;
@@ -1284,10 +1296,11 @@ body{
 }
 .footer .main-footer .third .lang .check-menu label{
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     background-color: rgba(0, 0, 0, 0.579);
     position: absolute;
     left: -90%;
+    bottom: 0;
 }
 .footer .main-footer .third .lang .lang-menu{
     position: absolute;
@@ -1341,5 +1354,5 @@ body{
     visibility: visible;
 }
 .footer .main-footer .third .lang input{
-    /* visibility: hidden; */
+    visibility: hidden;
 }
