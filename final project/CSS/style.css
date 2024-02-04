@@ -14,9 +14,11 @@
 body{
     min-height: 100vh;
     overflow-x: hidden;
+    max-width: 100vw;
 }
 .main-container{
     position: relative;
+    width: 100%;
 }
 /* header start */
 .navbar{
@@ -112,6 +114,11 @@ body{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 9px 8px;
     visibility: hidden;
     cursor: default;
+}
+@media screen and (min-width: 1440px) {
+    .sub-menu1 , .sub-menu2 , .sub-menu3 , .sub-menu4{
+        width: 100%;
+    }
 }
 .sub-menu3{
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -583,13 +590,15 @@ body{
 }
 /* header end */
 /* body start */
-.body{
+.container{
     min-height: 100vh;
     position: relative;
     top: 50px;
 }
-/* section1 (exolore) Start */
-.body .explore{
+
+/* ---section1 (exolore) Start ---*/
+
+.container .explore{
     background-color: #efefef;
     height: 80vh;
     width: 100%;
@@ -599,7 +608,7 @@ body{
     grid-template-columns: auto;
     font-family: bold;
 }
-.body .explore .title{
+.container .explore .title{
     text-align: center;
     line-height: 10vh;
     font-size: 23px;
@@ -620,87 +629,87 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
-.body .explore .games-sec1 h3{
+.container .explore .games-sec1 h3{
     width: 90%;
     margin: 10px auto;
     font-size: 17px;
 }
-.body .explore .games-sec1 div:hover{
+.container .explore .games-sec1 div:hover{
     text-decoration: underline;
 }
-.body .explore .games-sec1 div{
+.container .explore .games-sec1 div{
     cursor: pointer;
 }
-.body .explore .game-item1{
+.container .explore .game-item1{
     height: 100%;
     position: relative;
     width: 213px;
 }
-.body .explore .game-item1 .game-pic{
+.container .explore .game-item1 .game-pic{
     background-image: url(../image/acm-boxshot.jpg);
 }
-.body .explore .game-item2{
+.container .explore .game-item2{
     height: 100%;
     position: relative;
     width: 213px;
 }
-.body .explore .game-item2 .game-pic{
+.container .explore .game-item2 .game-pic{
     background-image: url(../image/MEMO_Packshot.jpg);
 }
-.body .explore .game-item3{
+.container .explore .game-item3{
     height: 100%;
     position: relative;
     width: 213px;
 }
-.body .explore .game-item3 .game-pic{
+.container .explore .game-item3 .game-pic{
     background-image: url(../image/XDefiant_game_info-boxart_464x608.jpg);
 }
-.body .explore .game-item4{
+.container .explore .game-item4{
     height: 100%;
     position: relative;
     width: 213px;
 }
-.body .explore .game-item4 .game-pic{
+.container .explore .game-item4 .game-pic{
     background-image: url(../image/avatar-frontiers-of-pandora-boxshot.jpg);
 }
-.body .explore .game-item5{
+.container .explore .game-item5{
     height: 100%;
     position: relative;
     width: 213px;
 }
-.body .explore .game-item5 .game-pic{
+.container .explore .game-item5 .game-pic{
     background-image: url(../image/TCM_Packshot.jpg);
 }
-.body .explore .game-item6{
+.container .explore .game-item6{
     height: 100%;
     position: relative;
     width: 213px;
 }
-.body .explore .game-item6 .game-pic{
+.container .explore .game-item6 .game-pic{
     background-image: url(../image/swo-boxshot.jpg);
 }
-.body .explore .social-icon{
+.container .explore .social-icon{
     width: 100%;
     height: 20px;
     opacity: 0.7;
     position: absolute;
     bottom: 0;
 }
-.body .explore .social-icon i{
+.container .explore .social-icon i{
     margin: 0 3px;
 }
-.body .explore .game-item1 .social-icon{
+.container .explore .game-item1 .social-icon{
     background-image: url(../image/social\ icon1.jpg);
     background-size: contain;
 }
-.body .explore .sec1-footer{
+.container .explore .sec1-footer{
     grid-column: 1 / span 6;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
-.body .explore .sec1-footer .sec1-button{
+.container .explore .sec1-footer .sec1-button{
     line-height: 50px;
     width: 250px;
     text-align: center;
@@ -717,7 +726,7 @@ body{
     position: relative;
     font-size: 20px;
 }
-.body .explore .sec1-footer .sec1-button .button-hover{
+.container .explore .sec1-footer .sec1-button .button-hover{
     width: 0;
     height: 0;
     position: absolute;
@@ -730,15 +739,16 @@ body{
     color: #ff0d78;
     border-radius: 40px;
 }
-.body .explore .sec1-footer .sec1-button:hover .button-hover{
+.container .explore .sec1-footer .sec1-button:hover .button-hover{
     width: 100%;
     height: 100%;
     color: #ff0d78;
     visibility: visible;
 }
-/* section1 (exolore) end */
-/* section2 (latest news) start */
-.body .latest-news{
+
+/* ---section2 (latest news) start--- */
+
+.container .latest-news{
     width: 98%;
     margin: auto;
     height: 120vh;
@@ -746,7 +756,7 @@ body{
     grid-template-columns: 50% 50%;
     grid-template-rows: 10% 5% 75% 10%;
 }
-.body .latest-news .news{
+.container .latest-news .news{
     grid-column: 1 / span 2;
     grid-row: 3;
     display: grid;
@@ -754,25 +764,25 @@ body{
     grid-template-rows: 33% 33% 33%;
     gap: 20px;
 }
-.body .latest-news .news-item1:hover , .body .latest-news .news-item2:hover,
-.body .latest-news .news-item3:hover , .body .latest-news .news-item4:hover,
-.body .latest-news .news-item5:hover .body .latest-news p{
+.container .latest-news .news-item1:hover , .container .latest-news .news-item2:hover,
+.container .latest-news .news-item3:hover , .container .latest-news .news-item4:hover,
+.container .latest-news .news-item5:hover .container .latest-news p{
     text-decoration: underline;
 }
-.body .latest-news img{
+.container .latest-news img{
     width: 100%;
     height: 100%;
 }
-.body .latest-news .date{
+.container .latest-news .date{
     margin-left: 20px;
 }
-.body .latest-news p{
+.container .latest-news p{
     font-family: bold;
     margin-left: 20px;
     max-width: 80%;
     font-size: 20px;
 }
-.body .latest-news .title{
+.container .latest-news .title{
     grid-row: 1;
     grid-column: 1 / span 2;
     display: flex;
@@ -780,7 +790,7 @@ body{
     align-items: center;
     font-family: bold;
 }
-.body .latest-news .news-menu{
+.container .latest-news .news-menu{
     grid-row: 2;
     grid-column: 1 / span 2;
     display: flex;
@@ -788,35 +798,35 @@ body{
     align-items: center;
     font-family: light;
 }
-.body .latest-news .news-menu a{
+.container .latest-news .news-menu a{
     color: #ff0d78;
     margin: 0 10px;
     text-decoration: none;
 }
-.body .latest-news .news-menu a:hover{
+.container .latest-news .news-menu a:hover{
     text-decoration: underline;
     color: black;
 }
-.body .latest-news .news-pic{
+.container .latest-news .news-pic{
     height: 80%;
     width: 90%;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
-.body .latest-news .news-item1{
+.container .latest-news .news-item1{
     grid-row: 1 / span 2;
     grid-column: 1;
     cursor: pointer;
 }
-.body .latest-news .news-item1 .news-desc{
+.container .latest-news .news-item1 .news-desc{
     margin-top: 20px;
 }
-.body .latest-news .news-item1 .news-pic{
+.container .latest-news .news-item1 .news-pic{
    width: 100%;
    height: 70%;
 }
-.body .latest-news .news-item2{
+.container .latest-news .news-item2{
     grid-column: 2;
     grid-row: 1 / span 1;
     cursor: pointer;
@@ -824,11 +834,11 @@ body{
     justify-content: center;
     align-items: flex-start;
 }
-.body .latest-news .news-item2 .news-pic{
+.container .latest-news .news-item2 .news-pic{
     width: 70%;
     height: 85%;
 }
-.body .latest-news .news-item3{
+.container .latest-news .news-item3{
     grid-column: 2;
     grid-row: 2 / span 1;
     cursor: pointer;
@@ -836,11 +846,11 @@ body{
     justify-content: center;
     align-items: flex-start;
 }
-.body .latest-news .news-item3 .news-pic{
+.container .latest-news .news-item3 .news-pic{
     width: 70%;
     height: 85%;
 }
-.body .latest-news .news-item4{
+.container .latest-news .news-item4{
     grid-column: 1;
     grid-row: 3 / span 1;
     cursor: pointer;
@@ -848,11 +858,11 @@ body{
     justify-content: center;
     align-items: flex-start;
 }
-.body .latest-news .news-item4 .news-pic{
+.container .latest-news .news-item4 .news-pic{
     width: 70%;
     height: 85%;
 }
-.body .latest-news .news-item5{
+.container .latest-news .news-item5{
     grid-column: 2;
     grid-row: 3;
     cursor: pointer;
@@ -860,7 +870,7 @@ body{
     justify-content: center;
     align-items: flex-start;
 }
-.body .latest-news .news-item5 .news-pic{
+.container .latest-news .news-item5 .news-pic{
     width: 70%;
     height: 85%;
 }
@@ -903,81 +913,83 @@ body{
     color: #ff0d78;
     visibility: visible;
 }
-/* section2 (latest news) end */
+
 /* section3 (store) start */
-.body .store{
+
+.container .store{
     height: 100vh;
     background-color: #efefef;
     font-family: bold;
 }
-.body .store .title{
+.container .store .title{
     padding: 20px;
     text-align: center;
 }
-.body .store .store-items{
+.container .store .store-items{
     padding: 20px;
     height: 580px;
     display: flex;
     align-items: stretch;
     justify-content: space-around;
 }
-.body .store .store-items .item1 , .body .store .store-items .item2 
-, .body .store .store-items .item3{
+.container .store .store-items .item1 , .container .store .store-items .item2 
+, .container .store .store-items .item3{
     width: 450px;
     background-position: center;
     background-size: 100%;
     cursor: pointer;
 }
-.body .store .store-items .item-desc{
+.container .store .store-items .item-desc{
     height: 100px;
     background-image: linear-gradient(black , transparent);
     color: white;
 }
-.body .store .store-items .item-desc h1{
+.container .store .store-items .item-desc h1{
     font-size: 26px;
     width: 90%;
     margin: auto;
     padding-top: 20px;
     text-align: center;
 }
-.body .store .store-items .item1{
+.container .store .store-items .item1{
     background-image: url(../image/ubi-homescreen-store_promo-mirage\ \(1\).jpg);
 }
-.body .store .store-items .item1:hover h1{
+.container .store .store-items .item1:hover h1{
     text-decoration: underline;
 }
-.body .store .store-items .item2{
+.container .store .store-items .item2{
     background-image: url(../image/ubi-homescreen-store_promo-avatar-preorder\ \(1\).jpg);
 }
-.body .store .store-items .item2:hover h1{
+.container .store .store-items .item2:hover h1{
     text-decoration: underline;
 }
-.body .store .store-items .item3{
+.container .store .store-items .item3{
     background-image: url(../image/ubi-homescreen-store_promo-tcm-preorder.jpg);
 }
-.body .store .store-items .item3:hover h1{
+.container .store .store-items .item3:hover h1{
     text-decoration: underline;
 }
-/* section3 (store) end */
+
 /* section4 (inside ubosoft) start */
-.body .inside-ubisoft{
+
+.container .inside-ubisoft{
     height: 85vh;
     font-family: bold;
     padding: 20px;
 }
-.body .inside-ubisoft .title{
+.container .inside-ubisoft .title{
     text-align: center;
     padding: 10px;
 }
-.body .inside-ubisoft .sec4-items{
+.container .inside-ubisoft .sec4-items{
     display: flex;
     justify-content: space-around;
     align-items: stretch;
     height: 490px;
     padding: 20px;
 }
-.body .inside-ubisoft .sec4-items .item1 ,.body .inside-ubisoft .sec4-items .item2 ,
- .body .inside-ubisoft .sec4-items .item3{
+.container .inside-ubisoft .sec4-items .item1 ,.container .inside-ubisoft .sec4-items .item2 ,
+ .container .inside-ubisoft .sec4-items .item3{
     width: 450px;
     position: relative;
     border-radius: 10px;
@@ -985,7 +997,7 @@ body{
     background-position: center;
     cursor: pointer;
 }
-.body .inside-ubisoft .sec4-items .opacity-box{
+.container .inside-ubisoft .sec4-items .opacity-box{
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.379);
@@ -997,49 +1009,49 @@ body{
     border-radius: 10px;
     height: 120px;
 }
-.body .inside-ubisoft .sec4-items .item1{
+.container .inside-ubisoft .sec4-items .item1{
     background-image: url(../image/ubi-homescreen-inside-ubisoft-ubi-fwd23-recap\ \(1\).jpg);
 }
-.body .inside-ubisoft .sec4-items .item1:hover   h2{
+.container .inside-ubisoft .sec4-items .item1:hover   h2{
     text-decoration: underline;
 }
-.body .inside-ubisoft .sec4-items .item2{
+.container .inside-ubisoft .sec4-items .item2{
     background-image: url(../image/ubi-inside_ubisoft-story_of_the_crew\ \(1\).jpg);
 }
-.body .inside-ubisoft .sec4-items .item2:hover   h2{
+.container .inside-ubisoft .sec4-items .item2:hover   h2{
     text-decoration: underline;
 }
-.body .inside-ubisoft .sec4-items .item3{
+.container .inside-ubisoft .sec4-items .item3{
     background-image: url(../image/ubi-homescreen-inside-ubisoft-UbiPride2023_480x480\ \(1\).jpg);
 }
-.body .inside-ubisoft .sec4-items .item3:hover   h2{
+.container .inside-ubisoft .sec4-items .item3:hover   h2{
     text-decoration: underline;
 }
 /* section4 (inside ubisoft) end */
 /* section5 (featured videos) start */
-.body .featured-vid{
+.container .featured-vid{
     height: 60vh;
     font-family: bold;
     padding: 20px;
     background-color: #efefef;
 }
-.body .featured-vid .title{
+.container .featured-vid .title{
     text-align: center;
     font-size: 23px;
     padding: 10px;
 }
-.body .featured-vid .video-items{
+.container .featured-vid .video-items{
     height: 340px;
     padding: 20px;
     display: flex;
     justify-content: space-around;
     align-items: stretch;
 }
-.body .featured-vid .video-items .item1 , .body .featured-vid .video-items .item2,
-.body .featured-vid .video-items .item3{
+.container .featured-vid .video-items .item1 , .container .featured-vid .video-items .item2,
+.container .featured-vid .video-items .item3{
     width: 450px;
 }
-.body .featured-vid .video-items .thumbnail{
+.container .featured-vid .video-items .thumbnail{
     height: 85%;
     font-size: 30px;
     display: flex;
@@ -1048,7 +1060,7 @@ body{
     background-position: center;
     background-size: 100%;
 }
-.body .featured-vid .video-items .thumbnail i{
+.container .featured-vid .video-items .thumbnail i{
     color: white;
     background-color: black;
     width: 50px;
@@ -1057,30 +1069,30 @@ body{
     text-align: center;
     line-height: 50px;
 }
-.body .featured-vid .video-items .item1 .thumbnail{
+.container .featured-vid .video-items .item1 .thumbnail{
     background-image: url(../image/acm-launch-trailer-thumbnail.jpg);
 }
-.body .featured-vid .video-items .item1:hover h3{
+.container .featured-vid .video-items .item1:hover h3{
     text-decoration: underline;
 }
-.body .featured-vid .video-items .item2 .thumbnail{
+.container .featured-vid .video-items .item2 .thumbnail{
     background-image: url(../image/feat_videos-pop-reveal_trailer-ncsa-opt.jpg);
 }
-.body .featured-vid .video-items .item2:hover h3{
+.container .featured-vid .video-items .item2:hover h3{
     text-decoration: underline;
 }
-.body .featured-vid .video-items .item3 .thumbnail{
+.container .featured-vid .video-items .item3 .thumbnail{
     background-image: url(../image/feat_videos-swo-premiere_trailer-ncsa-opt.jpg);
 }
-.body .featured-vid .video-items .item3:hover h3{
+.container .featured-vid .video-items .item3:hover h3{
     text-decoration: underline;
 }
-.body .featured-vid .video-items .vid-desc{
+.container .featured-vid .video-items .vid-desc{
     padding: 10px 0;
 }
 /* section5 (featured videos) end */
 /* section6 (ubisoft connect) start */
-.body .connect{
+.container .connect{
     height: 40vh;
     background-color: #091225;
     color: white;
@@ -1089,42 +1101,42 @@ body{
     grid-template-rows: 10% 90%;
     margin-bottom: 50px;
 }
-.body .connect .triangle{
+.container .connect .triangle{
     grid-column: 1 / span 3;
     grid-row: 1;
     text-align: center;
 }
-.body .connect .triangle img{
+.container .connect .triangle img{
     height: 100%;
 }
-.body .connect .connect-photo{
+.container .connect .connect-photo{
     grid-column: 1;
     grid-row: 2;
     width: 100%;
     height: 100%;
     text-align: right;
 }
-.body .connect .connect-photo img{
+.container .connect .connect-photo img{
     width: 80%;
 }
-.body .connect .connect-desc{
+.container .connect .connect-desc{
     grid-column: 2 / span 2;
     grid-row: 2;
 }
-.body .connect .connect-desc h1{
+.container .connect .connect-desc h1{
     font-family: bold;
     font-size: 50px;
     margin-top: 20px;
     margin-left: 50px;
 }
-.body .connect .connect-desc p{
+.container .connect .connect-desc p{
     font-size: 30px;
     font-family: light;
     width: 80%;
     margin-top: 20px;
     margin-left: 50px;
 }
-.body .connect .connect-button{
+.container .connect .connect-button{
     width: 300px;
     height: 40px;
     border-radius: 50px;
@@ -1138,15 +1150,16 @@ body{
     margin-top: 20px;
     cursor: pointer;
     border: 3px solid #006ef5;
+    transition: 0.3s;
 }
-.body .connect .connect-button:hover{
+.container .connect .connect-button:hover{
     background-color: white;
     color: #006ef5;
-
 }
 /* section6 (ubisoft connect) end */
 /* body end */
-/* footer start */
+
+/*-- footer start --*/
 .footer{
     min-height: 65vh;
     color: white;
