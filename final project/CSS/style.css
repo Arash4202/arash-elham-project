@@ -22,6 +22,8 @@ body{
 }
 /* header start */
 .navbar{
+    max-width: 1440px;
+    min-width: 100vw;
     z-index: 9999;
     position: fixed;
     font-family: bold;
@@ -457,11 +459,13 @@ body{
     color: #ff0d78;
 }
 .header{
+    max-width: 1440px;
+    min-width: 100vw;
     height: 100vh;
     position: relative;
     top: 50px;
     background-image: url(../image/ubi-homescreen-slide-ubi_plus-acm-bg-desktop.jpg);
-    background-size: 100%;
+    background-size: 100% 100%;
     background-position: center;
 }
 .header .title{
@@ -531,7 +535,7 @@ body{
     font-size: 20px;
 }
 .header .slideshow-left h3 {
-    margin:0 40px;
+    margin:0 60px;
     width: 100%;
     cursor: pointer;
 }
@@ -560,7 +564,7 @@ body{
     font-size: 20px;
 }
 .header .slideshow-right h3 {
-    margin: 0 40px;
+    margin: 0 30px;
     width: 100%;
     cursor: pointer;
 }
@@ -587,11 +591,36 @@ body{
     font-size: 40px;
     border-radius: 50px;
     text-align: center;
+    position: absolute;
+    left: 0;
+}
+@media screen and (max-width : 768px) {
+    .header{
+        background-size: cover;
+    }
+    .header .title{
+        width: 80%;
+    }
+    .header .slideshow-left , .header .slideshow-right{
+        display: none;
+        visibility: hidden;
+    }
+    .header .title-pic{
+        width: 40%;
+    }
+    .navbar .nav-item1 ,.navbar .nav-item2 ,.navbar .nav-item3 ,.navbar .nav-item4{
+        display: none;
+    }
+    .navbar .main-logo{
+        margin: auto;
+    }
 }
 /* header end */
 /* body start */
 .container{
-    min-height: 100vh;
+    max-width: 1440px;
+    min-width: 100vw;
+
     position: relative;
     top: 50px;
 }
@@ -609,7 +638,9 @@ body{
     font-family: bold;
 }
 .container .explore .title{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 10vh;
     font-size: 23px;
     grid-row: 1;
@@ -633,6 +664,17 @@ body{
     width: 90%;
     margin: 10px auto;
     font-size: 17px;
+}
+@media screen and (max-width : 768px) {
+    .games-sec1{
+        display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 33% 33% 33%;
+        padding-left: 30px;
+    }
+    .container .explore .game-item4 , .container .explore .game-item5 , .container .explore .game-item6{
+        display: none;
+    }
 }
 .container .explore .games-sec1 div:hover{
     text-decoration: underline;
@@ -756,11 +798,19 @@ body{
     grid-template-columns: 50% 50%;
     grid-template-rows: 10% 5% 75% 10%;
 }
+@media screen and (max-width : 768px) {
+    .container .latest-news{
+        min-height: 100vh;
+    }
+    .container .latest-news .news{
+        grid-template-columns: 100%;
+    }
+}
 .container .latest-news .news{
     grid-column: 1 / span 2;
     grid-row: 3;
     display: grid;
-    grid-column: 0% 50%;
+    grid-column: 50% 50%;
     grid-template-rows: 33% 33% 33%;
     gap: 20px;
 }
@@ -931,12 +981,24 @@ body{
     display: flex;
     align-items: stretch;
     justify-content: space-around;
+} 
+@media screen and (max-width : 768px) {
+    .container .store{
+        height: 50vh;
+    }
+    .container .store .store-items{
+        height: 300px;
+    }
+    .container .store .store-items .item1 , .container .store .store-items .item2 
+, .container .store .store-items .item3{
+    margin: 10px;
+}
 }
 .container .store .store-items .item1 , .container .store .store-items .item2 
 , .container .store .store-items .item3{
     width: 450px;
     background-position: center;
-    background-size: 100%;
+    background-size: 100% 100%;
     cursor: pointer;
 }
 .container .store .store-items .item-desc{
@@ -977,6 +1039,18 @@ body{
     font-family: bold;
     padding: 20px;
 }
+@media screen and (max-width : 768px) {
+    .container .inside-ubisoft .sec4-items{
+        justify-content: stretch;
+    }
+    .container .inside-ubisoft .sec4-items .item1{
+        width: 100%;
+    }
+    .container .inside-ubisoft .sec4-items .item2 ,
+ .container .inside-ubisoft .sec4-items .item3{
+    display: none;
+ }
+}
 .container .inside-ubisoft .title{
     text-align: center;
     padding: 10px;
@@ -993,7 +1067,7 @@ body{
     width: 450px;
     position: relative;
     border-radius: 10px;
-    background-size: 100%;
+    background-size: 100% 100%;
     background-position: center;
     cursor: pointer;
 }
@@ -1047,6 +1121,23 @@ body{
     justify-content: space-around;
     align-items: stretch;
 }
+@media screen and (max-width : 768px) {
+    .container .featured-vid{
+        height: 80vh;
+    }
+    .container .featured-vid .video-items{
+        height: 500px;
+        width: 100vw;
+        display: grid;
+    }
+    .container .featured-vid .video-items .item1 {
+        width: 100%;
+    }
+    .container .featured-vid .video-items .item2,
+    .container .featured-vid .video-items .item3{
+        display: none;
+    }
+}
 .container .featured-vid .video-items .item1 , .container .featured-vid .video-items .item2,
 .container .featured-vid .video-items .item3{
     width: 450px;
@@ -1058,7 +1149,7 @@ body{
     justify-content: center;
     align-items: center;
     background-position: center;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 .container .featured-vid .video-items .thumbnail i{
     color: white;
@@ -1156,12 +1247,16 @@ body{
     background-color: white;
     color: #006ef5;
 }
-/* section6 (ubisoft connect) end */
-/* body end */
+
+/*-- section6 (ubisoft connect) end --*/
 
 /*-- footer start --*/
+
+
 .footer{
-    min-height: 65vh;
+    max-width: 1440px;
+    min-width: 100vw;
+    height: 65vh;
     color: white;
 }
 .footer .other-channels{
@@ -1194,7 +1289,10 @@ body{
     font-size: 15px;
 }
 .footer .container{
-    top: 50px;
+    max-width: 1440px;
+    min-width: 100vw;
+    position: relative;
+    top: 0;
 }
 .footer .main-footer{
     background-color: rgb(29, 30, 34);;
