@@ -20,6 +20,17 @@ body{
     position: relative;
     width: 100%;
 }
+@media screen and (max-width : 768px){
+    *{
+        max-width: 768px;
+    }
+    body{
+        max-width: 768px;
+    }
+    .main-container{
+         max-width: 768px;
+    } 
+}
 /* header start */
 .navbar{
     max-width: 1440px;
@@ -805,6 +816,12 @@ body{
     .container .latest-news .news{
         grid-template-columns: 100%;
     }
+    .container .latest-news .news-item1, .container .latest-news .news2, .container .latest-news .news-item3 , 
+    .container .latest-news .news-item4 , .container .latest-news .news-item5{
+        grid-row: 1 / span 2;
+        grid-column: 1;
+        cursor: pointer;
+    }
 }
 .container .latest-news .news{
     grid-column: 1 / span 2;
@@ -1044,7 +1061,7 @@ body{
         justify-content: stretch;
     }
     .container .inside-ubisoft .sec4-items .item1{
-        width: 100%;
+        min-width: 700px;
     }
     .container .inside-ubisoft .sec4-items .item2 ,
  .container .inside-ubisoft .sec4-items .item3{
@@ -1067,7 +1084,7 @@ body{
     width: 450px;
     position: relative;
     border-radius: 10px;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     cursor: pointer;
 }
@@ -1124,6 +1141,7 @@ body{
 @media screen and (max-width : 768px) {
     .container .featured-vid{
         height: 80vh;
+        width: 100%;
     }
     .container .featured-vid .video-items{
         height: 500px;
@@ -1131,7 +1149,7 @@ body{
         display: grid;
     }
     .container .featured-vid .video-items .item1 {
-        width: 100%;
+        min-width: 700px;
     }
     .container .featured-vid .video-items .item2,
     .container .featured-vid .video-items .item3{
@@ -1191,6 +1209,26 @@ body{
     grid-template-columns: 40% 30% 30%;
     grid-template-rows: 10% 90%;
     margin-bottom: 50px;
+}
+@media screen and (max-width : 768px){
+    .container .connect .triangle{
+        grid-column: 1;
+        display: flex; 
+        justify-content: center;
+    }
+    .container .connect .triangle img{
+        max-height: 30px;
+    }
+    .container .connect{
+        min-height: 100vh;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 30% 30% 30%;
+    }
+    .container .connect .connect-photo{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
 }
 .container .connect .triangle{
     grid-column: 1 / span 3;
